@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
+<<<<<<< HEAD
 from typing import Any
 from django.db.models.query import QuerySet
 from django.db.models import Q
@@ -155,3 +156,13 @@ class OrgMemberDeleteView(DeleteView):
     model = OrgMember
     template_name = 'orgmember_del.html'
     success_url = reverse_lazy('orgmember-list')
+=======
+from django.shortcuts import render
+from django.views.generic.list import ListView
+from studentorg.models import Organization
+
+class HomePageView(ListView):
+    model = Organization
+    content_objective_name = 'home'
+    template_name = "home.html"
+>>>>>>> origin/main
